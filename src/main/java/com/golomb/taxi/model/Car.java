@@ -1,6 +1,7 @@
 package com.golomb.taxi.model;
 
 public class Car {
+    private Integer id;
     private String manufacturer;
     private int manufactureYear;
     private double littersPerHundredKm;
@@ -8,9 +9,18 @@ public class Car {
     private double kilometerPrice;
     private int carPrice;
 
-    public Car(int carPrice, double littersPerHundredKm) {
+    public Car(Integer id, int carPrice, double littersPerHundredKm) {
+        this.id = id;
         this.carPrice = carPrice;
         this.littersPerHundredKm = littersPerHundredKm;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getManufacturer() {

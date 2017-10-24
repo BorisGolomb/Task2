@@ -3,8 +3,8 @@ package com.golomb.taxi.model;
 public class ElectroCar extends Car {
     private int kilometersPerCharge;
 
-    public ElectroCar(int carPrice, double littersPerHundredKm) {
-        super(carPrice, littersPerHundredKm);
+    public ElectroCar(Integer id, int carPrice, double littersPerHundredKm) {
+        super(id, carPrice, littersPerHundredKm);
     }
 
     public int getKilometersPerCharge() {
