@@ -2,6 +2,7 @@ package com.golomb.taxi.dao;
 
 import com.golomb.taxi.model.Car;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface CarDao {
@@ -9,7 +10,7 @@ public interface CarDao {
 
     Car getCarById(Integer id);
 
-    List<Car> getAllCars();
+    List<Car> getAllCars() throws ClassNotFoundException, SQLException;
 
     void deleteCarById(Integer id);
 

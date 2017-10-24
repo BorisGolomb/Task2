@@ -12,7 +12,7 @@ public class PerformanceTest {
         //List<Car> cars = new LinkedList<>();
         List<Car> cars = new ArrayList<>();
         for (int i = 0; i < ITERATIONS_COUNT; i++) {
-            cars.add(new Car(i, i));
+            cars.add(new Car(i, i, i));
             if (i % 1000000 == 0) {
                 System.out.println(i / 1000000);
             }

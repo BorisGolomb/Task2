@@ -4,6 +4,7 @@ import com.golomb.taxi.dao.CarDao;
 import com.golomb.taxi.dao.jdbc.JdbcCarDao;
 import com.golomb.taxi.model.Car;
 
+import java.sql.SQLException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -12,7 +13,7 @@ public class CarService {
     private CarDao dao = new JdbcCarDao();
 //    private CarDao dao = new JsonFileCarDao();
 
-    public void execute() {
+    public void execute() throws SQLException, ClassNotFoundException {
         dao.initStorage();
 
 //        List<Car> cars = new ArrayList<Car>();
