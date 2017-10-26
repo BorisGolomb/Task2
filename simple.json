@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "manufactureYear": 0,
+    "littersPerHundredKm": 10.0,
+    "startPrice": 0.0,
+    "kilometerPrice": 0.0,
+    "carPrice": 500
+  },
+  {
+    "id": 2,
+    "manufactureYear": 0,
+    "littersPerHundredKm": 3.0,
+    "startPrice": 0.0,
+    "kilometerPrice": 0.0,
+    "carPrice": 1200
+  },
+  {
+    "id": 3,
+    "manufactureYear": 0,
+    "littersPerHundredKm": 8.0,
+    "startPrice": 0.0,
+    "kilometerPrice": 0.0,
+    "carPrice": 200
+  }
+]
