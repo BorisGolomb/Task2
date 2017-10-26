@@ -15,4 +15,6 @@ public interface CarDao {
     void deleteCarById(Integer id);
 
     void saveCar(Car car);
+
+    void saveCars(List<Car> cars);
 }

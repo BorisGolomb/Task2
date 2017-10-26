@@ -53,4 +53,9 @@ public class JdbcCarDao implements CarDao {
     public void saveCar(Car car) {
 
     }
+
+    @Override
+    public void saveCars(List<Car> cars) {
+
+    }
 }

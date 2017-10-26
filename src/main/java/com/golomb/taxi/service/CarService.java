@@ -2,6 +2,7 @@ package com.golomb.taxi.service;
 
 import com.golomb.taxi.dao.CarDao;
 import com.golomb.taxi.dao.jdbc.JdbcCarDao;
+import com.golomb.taxi.dao.json.JsonFileCarDao;
 import com.golomb.taxi.model.Car;
 
 import java.sql.SQLException;
@@ -23,6 +24,12 @@ public class CarService {
 //        cars.add(new Car(200, 7.5));
 
         List<Car> cars = dao.getAllCars();
+
+        //-------------------------------------
+        CarDao daoJson = new JsonFileCarDao();
+        daoJson.saveCars(cars);
+        //-------------------------------------
+
 
         System.out.println(cars);
 
