@@ -28,6 +28,8 @@ public class CarService {
         //-------------------------------------
         CarDao daoJson = new JsonFileCarDao();
         daoJson.saveCars(cars);
+        List<Car> carsFromFile = daoJson.getAllCars();
+        System.out.println(carsFromFile);
         //-------------------------------------
 
 

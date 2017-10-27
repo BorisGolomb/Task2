@@ -48,10 +48,11 @@ public class JsonFileCarDao implements CarDao {
 
     }
 
-    private static void readDataFromFile(final String fileName) {
+    private static List<String> readDataFromFile(final String fileName) {
 
         try {
-            List<String> stringList = Files.readAllLines(Paths.get(fileName), StandardCharsets.UTF_8);
+
+            return Files.readAllLines(Paths.get(fileName), StandardCharsets.UTF_8);
 
         } catch (final IOException e) {
 
@@ -64,9 +65,11 @@ public class JsonFileCarDao implements CarDao {
 
 
         Gson gson = new Gson();
-        String strJson;
-        gson.fromJson(strJson, new TypeToken<List<Car>>());
+        String strJson = readDataFromFile(FILE_NAME).get(0);
+        TypeToken<List<Car>> listTypeToken = new TypeToken<List<Car>>() {
+        };
 
+        return gson.fromJson(strJson, listTypeToken.getType());
     }
 
     @Override
